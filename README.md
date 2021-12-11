@@ -30,8 +30,9 @@ PROCESSES
 --Store choice in a variable
 
 -Determine who wins for the round
---if rock, rock beats scissors, loses to paper
---
+--if user chose rock and computer chose scissor 
+
+
 
 -Record the score
 -Keep track of round
