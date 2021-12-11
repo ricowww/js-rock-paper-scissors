@@ -39,10 +39,16 @@ PROCESSES
 --if user chose scissor and computer chose scissor, nothing happens
 --if user chose scissor and computer chose paper, user gets +1 point
 --if user chose scissor and computer chose rock, computer gets +1 point
+
 -Keep track of round
 --add +1 to round after the function above
 ---round starts at a value of 0
+
 -Repeat above until round 5
 --if round is less than 5, repeat all these functions
 --if round is not less than 5, declare the winner
----
+---if user points higher than computer points, user wins and gets a congratulations message
+---if computer points higher than computer points, computer wins and gets a congratulations message
+---if user and computer score is the same, no one wins and gets a draw message
+
+
