@@ -10,5 +10,8 @@ GUI
 INPUTS
 -players choice of rock, papper, scissors
 -computer's choice of rock, paper, scissors
+
 OUTPUTS
+-choice of user and computer and who wins per round
+
 PROCESSES
