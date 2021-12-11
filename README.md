@@ -20,9 +20,9 @@ OUTPUTS
 
 PROCESSES
 
--Prompt user to give input rock, paper, or scissor
---Prompt function for user to input and store it in a variable
- ---Checker function to make input case-insensitive
+-Let user input rock, paper, or scissor - OK
+--function to store textbox into a variable - OK
+ ---Checker function to make input case-insensitive - OK
  
 -Get computer player to input random  rock, paper, or scissor
 --Random function for computer to choose any of three numbers
@@ -52,3 +52,8 @@ PROCESSES
 ---if user and computer score is the same, no one wins and gets a draw message
 
 
+TASKS
+[DONE]github repo
+[]html and js connector
+[]component codes
+[]final code

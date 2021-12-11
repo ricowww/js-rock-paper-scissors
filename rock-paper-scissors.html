@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game of Rock Paper Scissors</title>
+  <meta charset="UTF-8"/>
+  <style>
+   
+    
+    #textbox {
+        margin: 20px 0px;
+        background-color: yellow;
+
+    }
+
+    div {
+        background-color: aqua;
+        max-width: 15vw;
+        padding: 5px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+    <h1>Game of Rock Paper Scissors</h1>
+    <p>Hey meatbag, pick between rock, paper and scissors in each round five times and beat the computer.</p> 
+    <h2>Enter your pick</h2>
+    <form>
+        <label for="textbox">Type rock, paper, or scissors. We know yer an idiot so capitalization don't matter. But please spell it right for fucks sake.</label>
+        <br>
+        <input type="text" id="textbox" value="rock" class="inputField"></input>
+        <br>
+        <input type="submit" id="submitbutton"></input>
+        <h2>Score</h2>
+        <div>{YOU: [score of user]} - {COMPUTER: [score of computer]}</div>
+        <h2>Round Number</h2>
+        <div>[Round Number] out of 5</div>
+    </form>
+
+    
+
+<script>
+    //Let user input rock, paper, or scissor - OK
+
+    //queries and turns field into an object? [DONE]
+    const inputField = document.querySelector('.inputField');
+
+    //extracts field text and stores in const [DONE] //converts to lowercase [DONE]
+    const userChoice = (String(inputField.value)).toLowerCase();
+
+    //-Get computer player to input random  rock, paper, or scissor
+
+    //--Random function for computer to choose a random number - OK
+    const computerRand = Math.random();
+    //--Numbers are converted into rock, paper, or scissors
+    const computerChoice;
+    if (computerRand > 0.66) {
+        computerChoice = 'rock';
+        alert(computerChoice);
+    } if (computerRand > 0.33) {
+        computerChoice = 'paper';
+        alert(computerChoice);
+    } if (computerRand > 0) {
+        computerChoice = 'scissors';
+        alert(computerChoice);
+    }
+
+       
+    //--Store choice in a variable
+
+    //tester
+    //alert(computerChoice);
+
+
+
+ 
+//Let user to give input rock, paper, or scissor in a text box
+//--function to get the textbox content store input in a variable
+    //let storeTextBoxInput = 
+
+
+
+</script>
+</body>
+</html>
