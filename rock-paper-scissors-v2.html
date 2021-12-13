@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game of Rock Paper Scissors</title>
+  <meta charset="UTF-8"/>
+  <style>
+   
+    
+    #textbox {
+        margin: 20px 0px;
+        background-color: yellow;
+
+    }
+
+    div {
+        background-color: aqua;
+        max-width: 15vw;
+        padding: 5px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+    <h1>Game of Rock Paper Scissors</h1>
+    <p>Hey meatbag, pick between rock, paper and scissors in each round five times and beat the computer.</p> 
+    <h2>Enter your pick</h2>
+    <form>
+        <label for="textbox">Type rock, paper, or scissors. We know yer an idiot so capitalization don't matter. But please spell it right for fucks sake.</label>
+        <br>
+        <input type="text" id="textbox" value="rock" class="inputField"></input>
+        <br>
+        <input type="submit" id="submitbutton"></input>
+        <h2>Score</h2>
+        <div>{YOU: [score of user]} - {COMPUTER: [score of computer]}</div>
+        <h2>Round Number</h2>
+        <div>[Round Number] out of 5</div>
+    </form>
+
+    
+
+<script>
+
+    //ROUND 1//
+    //Let user input rock, paper, or scissor - [DONE]
+
+    //queries and turns field into an object? [DONE]
+    const inputField = document.querySelector('.inputField');
+
+    //extracts field text and stores in const [DONE] //converts to lowercase [DONE]
+    const userChoice = (String(inputField.value)).toLowerCase();
+
+    //-Get computer player to input random  rock, paper, or scissor
+
+    //--Random function for computer to choose a random number - [DONE]
+    const computerRand = Math.random();
+    //--Numbers are converted into rock, paper, or scissors - [DONE]
+    //remember if(condition) {action} else if (condition) {action} . dumbass
+    //--Store choice in a variable - [DONE]
+    let computerChoice;
+    if (computerRand > 0.66) {
+        computerChoice = 'rock';
+        //alert(computerChoice);
+    } else if (computerRand > 0.33) {
+        computerChoice = 'paper';
+        //alert(computerChoice);
+    } else if (computerRand > 0) {
+        computerChoice = 'scissors';
+        //alert(computerChoice);
+    }
+
+    //-Determine who wins for the round and record the score - [DONE]
+    //--if user chose rock and computer chose scissor, user gets +1 point - [DONE]
+    //--if user chose rock and computer chose paper, computer gets +1 point [DONE]
+    //--if user chose rock and computer chose rock, nothing happens [DONE]
+    //--if user chose paper and computer chose scissor, computer gets +1 point [DONE]
+    //--if user chose paper and computer chose paper, nothing happens [DONE]
+    //--if user chose paper and computer chose rock, user gets +1 point [DONE]
+    //--if user chose scissor and computer chose scissor, nothing happens [DONE]
+    //--if user chose scissor and computer chose paper, user gets +1 point [DONE]
+    //--if user chose scissor and computer chose rock, computer gets +1 point [DONE]
+    let userPoints = 0;
+    let computerPoints = 0;
+    let roundMessage;
+    //---user enters rock
+    if (userChoice == 'rock' && computerChoice == 'scissors') {
+        userPoints += 1;
+        roundMessage = 'Meatbag user wins the round!';
+    } else if (userChoice == 'rock' && computerChoice == 'paper') {
+        computerPoints += 1;
+        roundMessage = 'Computer user wins the round!';
+    } else if (userChoice == 'rock' && computerChoice == 'rock') {
+        roundMessage = 'The round is a draw!';
+    //---user enters paper
+    } else if (userChoice == 'paper' && computerChoice == 'rock') {
+        userPoints += 1;
+        roundMessage = 'Meatbag user wins the round!';
+    } else if (userChoice == 'paper' && computerChoice == 'scissors') {
+        computerPoints += 1;
+        roundMessage = 'Computer user wins the round!';
+    } else if (userChoice == 'paper' && computerChoice == 'paper') {
+        roundMessage = 'The round is a draw!';
+    //---user enters scissors
+    } else if (userChoice == 'scissors' && computerChoice == 'paper') {
+        userPoints += 1;
+        roundMessage = 'Meatbag user wins the round!';
+    } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
+        computerPoints += 1;
+        roundMessage = 'Computer user wins the round!';
+    } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
+        roundMessage = 'The round is a draw!';
+    }
+    //---careful of variable spelling, it breaks code without calling errors
+    alert(userChoice + ' vs.' + computerChoice +roundMessage + 'the score is as follows user -- computer' + userPoints + '-- ' + computerPoints);
+
+
+    //-Keep track of round [DONE]
+    //--add +1 to round after the function above [DONE]
+    //---round starts at a value of 0* [DONE]
+    let roundNumber = 4;
+    alert('round number - ' + roundNumber);
+    roundNumber += 1;
+    alert('round number - ' + roundNumber);
+
+
+    //-Repeat above until round 5 [NOT DONE]
+    //--if round is less than 5, repeat all these functions [NOT DONE]
+    //--if round is not less than 5, declare the winner [DONE]
+    //---if user points higher than computer points, user wins and gets a congratulations message [DONE]
+    //---if computer points higher than computer points, computer wins and gets a congratulations message [DONE]
+    //---if user and computer score is the same, no one wins and gets a draw message [DONE]
+
+    let roundEndMessage;
+    if(roundNumber < 5) {
+        //code to repeat function*
+        roundEndMessage = 'Next round comin up'    
+    } else if (userPoints < computerPoints) {
+        roundEndMessage = 'Computer wins! Meatbag loses. You suck!'
+    } else if (userPoints > computerPoints) {
+        roundEndMessage = 'Meatbag wins. Unacceptable.'
+    } else if (userPoints == computerPoints) {
+        roundEndMessage = 'Draw.'
+    }
+    
+    alert(roundEndMessage);
+
+    
+//Wrap the above code into calleable functions
+
+//Add an event trigger to call the above functions when the submit button is clicked
+
+
+</script>
+</body>
+</html>
