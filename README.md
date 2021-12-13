@@ -24,12 +24,12 @@ PROCESSES
 --function to store textbox into a variable - OK
  ---Checker function to make input case-insensitive - OK
  
--Get computer player to input random  rock, paper, or scissor
+-Get computer player to input random  rock, paper, or scissor - OK
 --Random function for computer to choose any of three numbers
 --Numbers are converted into rock, paper, or scissors
 --Store choice in a variable
 
--Determine who wins for the round and record the score
+-Determine who wins for the round and record the score - OK
 --if user chose rock and computer chose scissor, user gets +1 point
 --if user chose rock and computer chose paper, computer gets +1 point
 --if user chose rock and computer chose rock, nothing happens
@@ -40,9 +40,12 @@ PROCESSES
 --if user chose scissor and computer chose paper, user gets +1 point
 --if user chose scissor and computer chose rock, computer gets +1 point
 
--Keep track of round
+-Keep track of round - OK
 --add +1 to round after the function above
 ---round starts at a value of 0
+
+Add an event trigger to call the above functions when the submit button is clicked
+Wrap the above code into calleable functions
 
 -Repeat above until round 5
 --if round is less than 5, repeat all these functions

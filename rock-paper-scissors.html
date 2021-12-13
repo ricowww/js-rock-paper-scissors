@@ -41,7 +41,9 @@
     
 
 <script>
-    //Let user input rock, paper, or scissor - OK
+
+    //ROUND 1//
+    //Let user input rock, paper, or scissor - [DONE]
 
     //queries and turns field into an object? [DONE]
     const inputField = document.querySelector('.inputField');
@@ -51,24 +53,76 @@
 
     //-Get computer player to input random  rock, paper, or scissor
 
-    //--Random function for computer to choose a random number - OK
+    //--Random function for computer to choose a random number - [DONE]
     const computerRand = Math.random();
-    //--Numbers are converted into rock, paper, or scissors
-    const computerChoice;
+    //--Numbers are converted into rock, paper, or scissors - [DONE]
+    //remember if(condition) {action} else if (condition) {action} . dumbass
+    //--Store choice in a variable - [DONE]
+    let computerChoice;
     if (computerRand > 0.66) {
         computerChoice = 'rock';
-        alert(computerChoice);
-    } if (computerRand > 0.33) {
+        //alert(computerChoice);
+    } else if (computerRand > 0.33) {
         computerChoice = 'paper';
-        alert(computerChoice);
-    } if (computerRand > 0) {
+        //alert(computerChoice);
+    } else if (computerRand > 0) {
         computerChoice = 'scissors';
-        alert(computerChoice);
+        //alert(computerChoice);
     }
 
-       
-    //--Store choice in a variable
+    //-Determine who wins for the round and record the score - [DONE]
+    //--if user chose rock and computer chose scissor, user gets +1 point - [DONE]
+    //--if user chose rock and computer chose paper, computer gets +1 point [DONE]
+    //--if user chose rock and computer chose rock, nothing happens [DONE]
+    //--if user chose paper and computer chose scissor, computer gets +1 point [DONE]
+    //--if user chose paper and computer chose paper, nothing happens [DONE]
+    //--if user chose paper and computer chose rock, user gets +1 point [DONE]
+    //--if user chose scissor and computer chose scissor, nothing happens [DONE]
+    //--if user chose scissor and computer chose paper, user gets +1 point [DONE]
+    //--if user chose scissor and computer chose rock, computer gets +1 point [DONE]
+    let userPoints = 0;
+    let computerPoints = 0;
+    let roundMessage;
+    //---user enters rock
+    if (userChoice == 'rock' && computerChoice == 'scissors') {
+        userPoints += 1;
+        roundMessage = 'Meatbag user wins the round!';
+    } else if (userChoice == 'rock' && computerChoice == 'paper') {
+        computerPoints += 1;
+        roundMessage = 'Computer user wins the round!';
+    } else if (userChoice == 'rock' && computerChoice == 'rock') {
+        roundMessage = 'The round is a draw!';
+    //---user enters paper
+    } else if (userChoice == 'paper' && computerChoice == 'rock') {
+        userPoints += 1;
+        roundMessage = 'Meatbag user wins the round!';
+    } else if (userChoice == 'paper' && computerChoice == 'scissors') {
+        computerPoints += 1;
+        roundMessage = 'Computer user wins the round!';
+    } else if (userChoice == 'paper' && computerChoice == 'paper') {
+        roundMessage = 'The round is a draw!';
+    //---user enters scissors
+    } else if (userChoice == 'scissors' && computerChoice == 'paper') {
+        userPoints += 1;
+        roundMessage = 'Meatbag user wins the round!';
+    } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
+        computerPoints += 1;
+        roundMessage = 'Computer user wins the round!';
+    } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
+        roundMessage = 'The round is a draw!';
+    }
+    //---careful of variable spelling, it breaks code without calling errors
+    alert(userChoice + ' vs.' + computerChoice +roundMessage + 'the score is as follows user -- computer' + userPoints + '-- ' + computerPoints);
 
+
+    //-Keep track of round
+    //--add +1 to round after the function above
+    //---round starts at a value of 0
+    let roundNumber = 0;
+    alert('round number - ' + roundNumber);
+    roundNumber += 1;
+    alert('round number - ' + roundNumber);
+       
     //tester
     //alert(computerChoice);
 
