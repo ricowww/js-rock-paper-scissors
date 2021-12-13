@@ -115,13 +115,40 @@
     alert(userChoice + ' vs.' + computerChoice +roundMessage + 'the score is as follows user -- computer' + userPoints + '-- ' + computerPoints);
 
 
-    //-Keep track of round
-    //--add +1 to round after the function above
-    //---round starts at a value of 0
-    let roundNumber = 0;
+    //-Keep track of round [DONE]
+    //--add +1 to round after the function above [DONE]
+    //---round starts at a value of 0* [DONE]
+    let roundNumber = 4;
     alert('round number - ' + roundNumber);
     roundNumber += 1;
     alert('round number - ' + roundNumber);
+
+
+    //-Repeat above until round 5 [NOT DONE]
+    //--if round is less than 5, repeat all these functions [NOT DONE]
+    //--if round is not less than 5, declare the winner [DONE]
+    //---if user points higher than computer points, user wins and gets a congratulations message [DONE]
+    //---if computer points higher than computer points, computer wins and gets a congratulations message [DONE]
+    //---if user and computer score is the same, no one wins and gets a draw message [DONE]
+
+    let roundEndMessage;
+    if(roundNumber < 5) {
+        //code to repeat function*
+        roundEndMessage = 'Next round comin up'    
+    } else if (userPoints < computerPoints) {
+        roundEndMessage = 'Computer wins! Meatbag loses. You suck!'
+    } else if (userPoints > computerPoints) {
+        roundEndMessage = 'Meatbag wins. Unacceptable.'
+    } else if (userPoints == computerPoints) {
+        roundEndMessage = 'Draw.'
+    }
+    
+    alert(roundEndMessage);
+
+
+
+
+
        
     //tester
     //alert(computerChoice);

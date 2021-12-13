@@ -44,8 +44,7 @@ PROCESSES
 --add +1 to round after the function above
 ---round starts at a value of 0
 
-Add an event trigger to call the above functions when the submit button is clicked
-Wrap the above code into calleable functions
+
 
 -Repeat above until round 5
 --if round is less than 5, repeat all these functions
@@ -55,8 +54,13 @@ Wrap the above code into calleable functions
 ---if user and computer score is the same, no one wins and gets a draw message
 
 
+Wrap the above code into calleable functions
+
+
+Add an event trigger to call the above functions when the submit button is clicked
+
 TASKS
 [DONE]github repo
-[]html and js connector
-[]component codes
+[DONE]html and js connector
+[DONE]component codes
 []final code
