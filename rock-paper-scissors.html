@@ -45,10 +45,10 @@
     //ROUND 1//
     //Let user input rock, paper, or scissor - [DONE]
 
-    //queries and turns field into an object? [DONE]
+    //FV1 - declare class as an object document.querySelector('.classname');[DONE]
     const inputField = document.querySelector('.inputField');
 
-    //extracts field text and stores in const [DONE] //converts to lowercase [DONE]
+    ////FV2 -grabs string value using String(const.value)// extracts field text and stores in const [DONE] //converts to lowercase [DONE]
     const userChoice = (String(inputField.value)).toLowerCase();
 
     //-Get computer player to input random  rock, paper, or scissor
@@ -111,8 +111,12 @@
     } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
         roundMessage = 'The round is a draw!';
     }
-    //---careful of variable spelling, it breaks code without calling errors
+    //---careful of variable spelling, it breaks code without calling errors. announce score
     alert(userChoice + ' vs.' + computerChoice +roundMessage + 'the score is as follows user -- computer' + userPoints + '-- ' + computerPoints);
+
+    //FV3 - resets the object value property after the evaluation
+    inputField.value = '';
+    inputField.focus();
 
 
     //-Keep track of round [DONE]

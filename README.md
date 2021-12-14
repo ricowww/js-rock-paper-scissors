@@ -59,6 +59,8 @@ Wrap the above code into calleable functions
 
 Add an event trigger to call the above functions when the submit button is clicked
 
+Convert alert messages to <p> messages
+
 TASKS
 [DONE]github repo
 [DONE]html and js connector
