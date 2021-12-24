@@ -9,23 +9,31 @@
 <!--textbox and submit button-->
 <input type="text" class="textSubmit" value="a">
 <input type="submit" class="submitButton" >
- 
+
+<!--textbox and submit button-->
+<div class="messageBox"></div>
+<div class="inputMessageBox"></div>
 
 <script>
 
+//SUBMITBOX & MESSAGEBOX
 
-//SUBMITBOX
+//declare objects
 const textSubmit = document.querySelector('.textSubmit');
 const submitButton = document.querySelector('.submitButton');
+const messageBox = document.querySelector('.messageBox');
+const inputMessageBox = document.querySelector('.inputMessageBox');
+
 //function to alert the submitted text
-let functionAlert = () => alert(String(textSubmit.value));
+///also to update the message in div
+let functionAlert = () => {
+  inputMessageBox.textContent = 'value was entered';
+  messageBox.textContent = String(textSubmit.value);
+};
+
 //listener to trigger function upon click. note, call function with no brackets
 submitButton.addEventListener('click', functionAlert);
 
-//
-
-
- 
 </script>
 </body>
 </html>
