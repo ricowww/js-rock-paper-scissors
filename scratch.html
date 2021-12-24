@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+
+<body>
+<!--textbox and submit button-->
+<input type="text" class="textSubmit" value="a">
+<input type="submit" class="submitButton" >
+ 
+
+<script>
+
+
+//SUBMITBOX
+const textSubmit = document.querySelector('.textSubmit');
+const submitButton = document.querySelector('.submitButton');
+//function to alert the submitted text
+let functionAlert = () => alert(String(textSubmit.value));
+//listener to trigger function upon click. note, call function with no brackets
+submitButton.addEventListener('click', functionAlert);
+
+//
+
+
+ 
+</script>
+</body>
+</html>
