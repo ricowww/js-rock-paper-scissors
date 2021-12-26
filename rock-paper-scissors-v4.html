@@ -29,13 +29,13 @@
     <form>
         <label for="textbox">Type rock, paper, or scissors. We know yer an idiot so capitalization don't matter. But please spell it right for fucks sake.</label>
         <br>
-        <input type="text" id="textbox" value="" class="inputField">
+        <input type="text" value="" class="inputField">
         <br>
-        <input type="submit" id="submitbutton" class="inputSubmit">
-        <h2>Score</h2>
-        <div>{YOU: [score of user]} - {COMPUTER: [score of computer]}</div>
-        <h2>Round Number</h2>
-        <div>[Round Number] out of 5</div>
+        <input type="submit"" class="inputSubmit">
+        <h2>Round Number and Score</h2>
+        <div id="roundNumberAndScore"></div>
+        <h2>Round Message</h2>
+        <div id="roundMessage"></div>
     </form>
 
     
@@ -44,18 +44,19 @@
 
 //STORE
     //Let user input rock, paper, or scissor - [DONE]
-
      //EL1 - declare class as an object document.querySelector('.classname');
     const inputSubmit = document.querySelector('.inputSubmit');
-
     //FV1 - declare class as an object document.querySelector('.classname');queries and turns field into an object? [DONE]
     const inputField = document.querySelector('.inputField');
+    //declare the messageboxes
+    const messageBox = document.querySelector('#roundNumberAndScore');
+    const messageBox = document.querySelector('#roundMessage');
 
     //FV2 -grabs string value using String(const.value)//extracts field text and stores in const [DONE] //converts to lowercase [DONE]
     //using
-    let userChoice = (String(inputField.value)).toLowerCase();
+    //let userChoice = (String(inputField.value)).toLowerCase();
 
-    alert(userChoice);
+    //alert(userChoice);
 //EVALUATE
 
     evaluateFunction = () => {
@@ -76,7 +77,10 @@
         } else if (computerRand > 0) {
             computerChoice = 'scissors';
             //alert(computerChoice);
-        }
+        };
+
+        alert(computerChoice);
+
 
         //-Determine who wins for the round and record the score - [DONE]
         //--if user chose rock and computer chose scissor, user gets +1 point - [DONE]
@@ -164,11 +168,14 @@
 
 
         
-    }
+    };
 
 
     //EL2 - attach an EL to the constant; document.addEventListener(event, function, useCapture)
-    inputSubmit.addEventListener('click', evaluateFunction());
+    inputSubmit.addEventListener('click', evaluateFunction);
+
+    //test call
+    evaluateFunction();
 
 
     //Add an event trigger to call the above functions when the submit button is clicked - [DONE]

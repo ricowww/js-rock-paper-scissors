@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+
+<body>
+
+<script>
+
+rockPaperScissorsAI = () => {
+
+//-Get computer player to input random  rock, paper, or scissor
+///--Random function for computer to choose a random number - [DONE]
+let computerRand = Math.random();
+///--Numbers are converted into rock, paper, or scissors - [DONE]
+///remember if(condition) {action} else if (condition) {action} . dumbass
+///--Store choice in a variable - [DONE]
+let computerChoice;
+if (computerRand > 0.66) {
+    computerChoice = 'rock';
+    //alert(computerChoice);
+} else if (computerRand > 0.33) {
+    computerChoice = 'paper';
+    //alert(computerChoice);
+} else if (computerRand > 0) {
+    computerChoice = 'scissors';
+    //alert(computerChoice);
+}
+
+//testers
+alert(computerRand);
+alert(computerChoice);
+};
+
+rockPaperScissorsAI();
+
+
+</script>
+</body>
+</html>

@@ -65,4 +65,13 @@ TASKS
 [DONE]github repo
 [DONE]html and js connector
 [DONE]component codes
+[]flowchart for game
+[]separate files for codes
+--AI to choose for AI
+--storer for user
+--evaluator to see who wins round
+--round keeper to add to round
+--messages
+[]
+
 []final code
