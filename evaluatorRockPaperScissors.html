@@ -9,17 +9,21 @@
 
 <script>
 
-//PREREQUISITES
+//"evaluatorRockPaperScissors" PREREQUISITES
 //variables for user choice and computer choice on rock/paper/scissors
 //variables for storing user and computer points
 //call function
 
-//test variables
+//"evaluatorRockPaperScissors"test variables
 let computerChoice = 'paper';
 let userChoice = 'rock';
+
+//"evaluatorRockPaperScissors" function variables
 let computerPoints = 0;
 let userPoints = 0;
+let roundNumber = 0;
 
+//"evaluatorRockPaperScissors" function start
 
 evaluatorRockPaperScissors = (userChoice, computerChoice) => {
 
@@ -50,12 +54,16 @@ evaluatorRockPaperScissors = (userChoice, computerChoice) => {
     } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
         roundMessage = 'The round is a draw!';
     };
+    roundNumber += 1;
     alert(roundMessage);
     alert('computer score is ' + computerPoints);
     alert('user score is ' + userPoints);
+    alert('RN  ' + roundNumber);
+
    
 }
 
+//"evaluatorRockPaperScissors" function end
 
 //test call
 //evaluatorRockPaperScissors(userChoice, computerChoice);

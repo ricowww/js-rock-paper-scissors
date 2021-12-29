@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game of Rock Paper Scissors</title>
+  <meta charset="UTF-8"/>
+  <style>
+   
+    
+    #textbox {
+        margin: 20px 0px;
+        background-color: yellow;
+
+    }
+
+    div {
+        background-color: aqua;
+        max-width: 15vw;
+        padding: 5px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+    <h1>Game of Rock Paper Scissors</h1>
+    <p>Hey meatbag, pick between rock, paper and scissors in each round five times and beat the computer.</p> 
+    <h2>Enter your pick</h2>
+    <form>
+        <label for="textbox">Type rock, paper, or scissors. We know you are an idiot so capitalization doesn't matter. But please spell it right for fucks sake.</label>
+        <br>
+
+        <!--textfield and submit button-->
+        <input type="text" class="inputField" value="">
+        <input type="submit"" class="inputSubmit">
+        <!--textboxes-->
+        <h2>Round Number and Score</h2>
+        <div id="roundNumberAndScoreDiv"></div>
+        <h2>Game Message</h2>
+        <div id="gameMessageDiv"></div>
+    </form>
+
+    
+
+<script>
+
+//"storeUserInput" PREREQUISITES
+//no inputs needed
+//constants to store document objects
+///input field
+///submit button
+///divs
+//variables for storing user choice
+//call function
+
+//"storeUserInput" function variables
+//had errors in making the queryselector calls consistent
+
+const inputField = document.querySelector('.inputField');
+const inputSubmit = document.querySelector('.inputSubmit');
+const roundNumberAndScoreDiv = document.querySelector('#roundNumberAndScoreDiv');
+const gameMessageDiv = document.querySelector('#gameMessageDiv');
+let userChoice ;
+
+
+//"storeUserInput" function start
+
+storeUserInput = () => {
+    userChoice = String(inputField.value);
+}
+
+//function end
+
+//"userInputAcceptReject" PREREQUISITES
+//input userChoice
+//variables for storing rejection message
+//needed to nest in the other functions to properly stop the evaluation if the input is erroneous
+//call function
+
+//"userInputAcceptReject" test variables
+//let userChoice = 'pepe';
+//let userChoice = 'scissors';
+
+// "userInputAcceptReject" function variables
+let acceptRejectMessage;
+
+//function start
+
+userInputAcceptReject = (userChoice) => {
+
+   //convert userchoice to lowercase
+   //match the word into rock, paper or scissors
+   //if no match, break function
+
+    userChoice = userChoice.toLowerCase();
+
+    switch (userChoice) {
+        case 'rock':
+            acceptRejectMessage = 'rock. input accepted';
+            alert(acceptRejectMessage);
+            break;
+        case 'paper':
+            acceptRejectMessage = 'paper. input accepted';
+            alert(acceptRejectMessage);
+            break;   
+        case 'scissors':
+            acceptRejectMessage = 'scissors. input accepted';
+            alert(acceptRejectMessage);
+            break; 
+        default:
+            acceptRejectMessage = 'Spell it right you smelly rolling fatass meatbag';
+            alert(acceptRejectMessage);
+            return;
+        }    
+    alert(userChoice);
+    //input other functions here
+}
+//function end
+
+//"aIRockPaperScissors" PREREQUISITES
+//no inputs needed
+
+//"aIRockPaperScissors" function variables
+let computerRand = Math.random();
+let computerChoice;
+
+//"aIRockPaperScissors" function start
+
+aIRockPaperScissors = () => {
+
+//-Get computer player to input random  rock, paper, or scissor
+///--Random function for computer to choose a random number  - [DONE]
+///--Numbers are converted into rock, paper, or scissors - [DONE]
+///remember if(condition) {action} else if (condition) {action} . dumbass
+///--Store choice in a variable - [DONE]
+if (computerRand > 0.66) {
+    computerChoice = 'rock';
+    //alert(computerChoice);
+} else if (computerRand > 0.33) {
+    computerChoice = 'paper';
+    //alert(computerChoice);
+} else if (computerRand > 0) {
+    computerChoice = 'scissors';
+    //alert(computerChoice);
+}
+
+//testers
+alert(computerRand);
+alert(computerChoice);
+};
+
+//"aIRockPaperScissors" function end
+
+
+//"evaluatorRockPaperScissors" PREREQUISITES
+//variables for user choice and computer choice on rock/paper/scissors
+//variables for storing user and computer points
+//call function
+
+//"evaluatorRockPaperScissors"test variables
+let computerChoice = 'paper';
+let userChoice = 'rock';
+
+//"evaluatorRockPaperScissors" function variables
+let computerPoints = 0;
+let userPoints = 0;
+let roundNumber = 0;
+
+//"evaluatorRockPaperScissors" function start
+
+evaluatorRockPaperScissors = (userChoice, computerChoice) => {
+
+    if (userChoice == 'rock' && computerChoice == 'scissors') {
+        userPoints += 1;
+        roundMessage = 'Meatbag user wins the round!';
+    } else if (userChoice == 'rock' && computerChoice == 'paper') {
+        computerPoints += 1;
+        roundMessage = 'Computer user wins the round!';
+    } else if (userChoice == 'rock' && computerChoice == 'rock') {
+        roundMessage = 'The round is a draw!';
+    //---user enters paper
+    } else if (userChoice == 'paper' && computerChoice == 'rock') {
+        userPoints += 1;
+        roundMessage = 'Meatbag wins the round!';
+    } else if (userChoice == 'paper' && computerChoice == 'scissors') {
+        computerPoints += 1;
+        roundMessage = 'Computer wins the round!';
+    } else if (userChoice == 'paper' && computerChoice == 'paper') {
+        roundMessage = 'The round is a draw!';
+    //---user enters scissors
+    } else if (userChoice == 'scissors' && computerChoice == 'paper') {
+        userPoints += 1;
+        roundMessage = 'Meatbag wins the round!';
+    } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
+        computerPoints += 1;
+        roundMessage = 'Computer wins the round!';
+    } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
+        roundMessage = 'The round is a draw!';
+    };
+    roundNumber += 1;
+    alert(roundMessage);
+    alert('computer score is ' + computerPoints);
+    alert('user score is ' + userPoints);
+   
+}
+
+//"evaluatorRockPaperScissors" function end
+
+//"endRound" PREREQUISITES
+//input round number, user points and computer points
+//variables for storing round end message
+//call function
+
+//"endRound" test variables
+//let roundNumber = 5;
+//let userPoints = 2;
+//let computerPoints = 1;
+
+//"endRound" function variables
+let roundEndMessage = "";
+
+//"endRound" function start
+endRound = (roundNumber, userPoints, computerPoints) => {
+
+    //-Repeat above until round 5 [NOT DONE]
+        //--if round is less than 5, repeat all these functions [NOT DONE]
+        //--if round is not less than 5, declare the winner [DONE]
+        //---if user points higher than computer points, user wins and gets a congratulations message [DONE]
+        //---if computer points higher than computer points, computer wins and gets a congratulations message [DONE]
+        //---if user and computer score is the same, no one wins and gets a draw message [DONE]
+        if(roundNumber < 5) {
+            roundEndMessage = 'Next round comin up';    
+        } else if (userPoints < computerPoints) {
+            roundEndMessage = 'Game Over. Computer wins! You suck Meatbag!';
+        } else if (userPoints > computerPoints) {
+            roundEndMessage = 'Game Over. Meatbag wins. Unacceptable.';
+        } else if (userPoints == computerPoints) {
+            roundEndMessage = 'Game Over. Draw.';
+        };
+
+        alert('This is the end of Round Number ' + roundNumber);
+        alert(roundEndMessage);
+   
+}
+//function end
+
+allFunctionsWrapped = () => {
+    storeUserInput();
+    userInputAcceptReject(userChoice);
+    aIRockPaperScissors();
+    evaluatorRockPaperScissors (userChoice, computerChoice);
+    endRound (roundNumber, userPoints, computerPoints);
+}
+
+inputSubmit.addEventListener('click', allFunctionsWrapped);
+
+
+
+</script>
+</body>
+</html>

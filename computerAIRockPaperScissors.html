@@ -9,19 +9,22 @@
 
 <script>
 
-//PREREQUISITES
+//"aIRockPaperScissors" PREREQUISITES
 //no inputs needed
-//call function
+
+//"aIRockPaperScissors" function variables
+let computerRand = Math.random();
+let computerChoice;
+
+//"aIRockPaperScissors" function start
 
 aIRockPaperScissors = () => {
 
 //-Get computer player to input random  rock, paper, or scissor
 ///--Random function for computer to choose a random number  - [DONE]
-let computerRand = Math.random();
 ///--Numbers are converted into rock, paper, or scissors - [DONE]
 ///remember if(condition) {action} else if (condition) {action} . dumbass
 ///--Store choice in a variable - [DONE]
-let computerChoice;
 if (computerRand > 0.66) {
     computerChoice = 'rock';
     //alert(computerChoice);
@@ -37,8 +40,11 @@ if (computerRand > 0.66) {
 alert(computerRand);
 alert(computerChoice);
 };
+
+//"aIRockPaperScissors" function end
+
 //test call
-rockPaperScissorsAI();
+//aIRockPaperScissors();
 
 </script>
 </body>
