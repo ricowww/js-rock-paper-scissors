@@ -4,6 +4,11 @@ Game of rock-paper-scissors with computer using javascript as a project for the 
 
 PLAN
 -------------
+[update 2021 12 29]
+Testing is hard on a long code
+Lets make functions into separate codes first
+Then we mishmash them together
+
 GUI
 -command line
 
@@ -16,7 +21,8 @@ INPUTS
 
 OUTPUTS
 
--choice of user and computer and who wins per round
+-choice of user and computer and score per round
+-end game message after 5 rounds
 
 PROCESSES
 
@@ -45,7 +51,6 @@ PROCESSES
 ---round starts at a value of 0
 
 
-
 -Repeat above until round 5
 --if round is less than 5, repeat all these functions
 --if round is not less than 5, declare the winner
@@ -65,13 +70,14 @@ TASKS
 [DONE]github repo
 [DONE]html and js connector
 [DONE]component codes
-[]flowchart for game
-[]separate files for codes
---AI to choose for AI
---storer for user
---evaluator to see who wins round
---round keeper to add to round
+[CANCELLED]flowchart for game
+[ONGOING]Separate files for codes
+--input acceptor-rejector
+--storer for user [NOTDONE]
+--AI to choose for AI [DONE]
+--evaluator to see who wins round [DONE]
+--round keeper to add to round and declare game over
 --messages
-[]
+[] TIE into submit>AI>evaluate>gameover
 
 []final code

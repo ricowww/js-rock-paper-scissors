@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+
+<body>
+
+<script>
+
+//PREREQUISITES
+//variables for user choice and computer choice on rock/paper/scissors
+//variables for storing user and computer points
+//call function
+
+//test variables
+let computerChoice = 'paper';
+let userChoice = 'rock';
+let computerPoints = 0;
+let userPoints = 0;
+
+
+evaluatorRockPaperScissors = (userChoice, computerChoice) => {
+
+    if (userChoice == 'rock' && computerChoice == 'scissors') {
+        userPoints += 1;
+        roundMessage = 'Meatbag user wins the round!';
+    } else if (userChoice == 'rock' && computerChoice == 'paper') {
+        computerPoints += 1;
+        roundMessage = 'Computer user wins the round!';
+    } else if (userChoice == 'rock' && computerChoice == 'rock') {
+        roundMessage = 'The round is a draw!';
+    //---user enters paper
+    } else if (userChoice == 'paper' && computerChoice == 'rock') {
+        userPoints += 1;
+        roundMessage = 'Meatbag wins the round!';
+    } else if (userChoice == 'paper' && computerChoice == 'scissors') {
+        computerPoints += 1;
+        roundMessage = 'Computer wins the round!';
+    } else if (userChoice == 'paper' && computerChoice == 'paper') {
+        roundMessage = 'The round is a draw!';
+    //---user enters scissors
+    } else if (userChoice == 'scissors' && computerChoice == 'paper') {
+        userPoints += 1;
+        roundMessage = 'Meatbag wins the round!';
+    } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
+        computerPoints += 1;
+        roundMessage = 'Computer wins the round!';
+    } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
+        roundMessage = 'The round is a draw!';
+    };
+    alert(roundMessage);
+    alert('computer score is ' + computerPoints);
+    alert('user score is ' + userPoints);
+   
+}
+
+
+//test call
+//evaluatorRockPaperScissors(userChoice, computerChoice);
+evaluatorRockPaperScissors('rock', 'rock');
+
+
+</script>
+</body>
+</html>

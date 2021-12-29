@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+
+<body>
+
+<script>
+
+//"endRound" PREREQUISITES
+//input round number, user points and computer points
+//variables for storing round end message
+//call function
+
+//"endRound" test variables
+let roundNumber = 5;
+let userPoints = 2;
+let computerPoints = 1;
+
+//"endRound" function variables
+let roundEndMessage = "";
+
+//"endRound" function start
+endRound = (roundNumber, userPoints, computerPoints) => {
+
+    //-Repeat above until round 5 [NOT DONE]
+        //--if round is less than 5, repeat all these functions [NOT DONE]
+        //--if round is not less than 5, declare the winner [DONE]
+        //---if user points higher than computer points, user wins and gets a congratulations message [DONE]
+        //---if computer points higher than computer points, computer wins and gets a congratulations message [DONE]
+        //---if user and computer score is the same, no one wins and gets a draw message [DONE]
+        if(roundNumber < 5) {
+            roundEndMessage = 'Next round comin up';    
+        } else if (userPoints < computerPoints) {
+            roundEndMessage = 'Game Over. Computer wins! You suck Meatbag!';
+        } else if (userPoints > computerPoints) {
+            roundEndMessage = 'Game Over. Meatbag wins. Unacceptable.';
+        } else if (userPoints == computerPoints) {
+            roundEndMessage = 'Game Over. Draw.';
+        };
+
+        alert('This is the end of Round Number ' + roundNumber);
+        alert(roundEndMessage);
+   
+}
+//function end
+
+
+//test call
+endRound(roundNumber, userPoints, computerPoints)
+
+</script>
+</body>
+</html>

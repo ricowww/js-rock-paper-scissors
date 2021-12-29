@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game of Rock Paper Scissors</title>
+  <meta charset="UTF-8"/>
+  <style>
+   
+    
+    #textbox {
+        margin: 20px 0px;
+        background-color: yellow;
+
+    }
+
+    div {
+        background-color: aqua;
+        max-width: 15vw;
+        padding: 5px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+    <h1>Game of Rock Paper Scissors</h1>
+    <p>Hey meatbag, pick between rock, paper and scissors in each round five times and beat the computer.</p> 
+    <h2>Enter your pick</h2>
+    <form>
+        <label for="textbox">Type rock, paper, or scissors. We know you are an idiot so capitalization doesn't matter. But please spell it right for fucks sake.</label>
+        <br>
+
+        <!--textfield and submit button-->
+        <input type="text" class="inputField" value="booo" >
+        <input type="submit"" class="inputSubmit">
+        <!--textboxes-->
+        <h2>Round Number and Score</h2>
+        <div id="roundNumberAndScoreDiv"></div>
+        <h2>Game Message</h2>
+        <div id="gameMessageDiv"></div>
+    </form>
+
+    
+
+<script>
+
+//"storeUserInput" PREREQUISITES
+//no inputs needed
+//constants to store document objects
+///input field
+///submit button
+///divs
+//variables for storing user choice
+//call function
+
+//"storeUserInput" function variables
+//had errors in making the queryselector calls consistent
+
+const inputField = document.querySelector('.inputField');
+const inputSubmit = document.querySelector('.inputSubmit');
+const roundNumberAndScoreDiv = document.querySelector('#roundNumberAndScoreDiv');
+const gameMessageDiv = document.querySelector('#gameMessageDiv');
+let userChoice ;
+
+
+//"storeUserInput" function start
+
+storeUserInput = () => {
+    userChoice = String(inputField.value);
+}
+
+//function end
+
+//test call
+storeUserInput();
+alert(userChoice);
+
+//inputSubmit.addEventListener('click', evaluateFunction);
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+
+<body>
+
+<script>
+
+//PREREQUISITES
+//input userChoice
+//variables for storing rejection message
+//needed to nest in the other functions to properly stop the evaluation if the input is erroneous
+//call function
+
+//test variables
+let userChoice = 'pepe';
+//let userChoice = 'scissors';
+
+//function variables
+let acceptRejectMessage;
+
+//function start
+
+userInputAcceptReject = (userChoice) => {
+
+   //convert userchoice to lowercase
+   //match the word into rock, paper or scissors
+   //if no match, break function
+
+    userChoice = userChoice.toLowerCase();
+
+    switch (userChoice) {
+        case 'rock':
+            acceptRejectMessage = 'rock. input accepted';
+            alert(acceptRejectMessage);
+            break;
+        case 'paper':
+            acceptRejectMessage = 'paper. input accepted';
+            alert(acceptRejectMessage);
+            break;   
+        case 'scissors':
+            acceptRejectMessage = 'scissors. input accepted';
+            alert(acceptRejectMessage);
+            break; 
+        default:
+            acceptRejectMessage = 'Spell it right you smelly rolling fatass meatbag';
+            alert(acceptRejectMessage);
+            return;
+        }    
+    alert(userChoice);
+    //input other functions here
+}
+//function end
+
+
+//test call
+userInputAcceptReject(userChoice);
+
+</script>
+</body>
+</html>
