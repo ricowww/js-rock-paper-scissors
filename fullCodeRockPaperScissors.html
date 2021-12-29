@@ -88,7 +88,7 @@ let acceptRejectMessage;
 
 //function start
 
-userInputAcceptReject = (userChoice) => {
+userInputAcceptReject = () => {
 
    //convert userchoice to lowercase
    //match the word into rock, paper or scissors
@@ -170,7 +170,9 @@ let roundNumber = 0;
 
 //"evaluatorRockPaperScissors" function start
 
-evaluatorRockPaperScissors = (userChoice, computerChoice) => {
+//evaluatorRockPaperScissors = (userChoice, computerChoice) => {
+evaluatorRockPaperScissors = () => {
+
 
     if (userChoice == 'rock' && computerChoice == 'scissors') {
         userPoints += 1;
@@ -222,7 +224,7 @@ evaluatorRockPaperScissors = (userChoice, computerChoice) => {
 let roundEndMessage = "";
 
 //"endRound" function start
-endRound = (roundNumber, userPoints, computerPoints) => {
+endRound = () => {
 
     //-Repeat above until round 5 [NOT DONE]
         //--if round is less than 5, repeat all these functions [NOT DONE]
@@ -248,10 +250,10 @@ endRound = (roundNumber, userPoints, computerPoints) => {
 
 allFunctionsWrapped = () => {
     storeUserInput();
-    userInputAcceptReject(userChoice);
+    userInputAcceptReject();
     aIRockPaperScissors();
-    evaluatorRockPaperScissors(userChoice, computerChoice);
-    endRound(roundNumber, userPoints, computerPoints);
+    evaluatorRockPaperScissors();
+    endRound();
 };
 
 inputSubmit.addEventListener('click', allFunctionsWrapped);

@@ -87,3 +87,5 @@ DEBUG NOTES
 -scores are not persistent
 -round numbers are not persistent
 -invalid inputs push through up to AI
+-tried relocating the supposedly persistent variables (user scores etc.) to upper line of script, assuming the issue is about redeclaring when click calls functions
+-tried making functions empty and calling them empty but doesnt work either
