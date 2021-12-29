@@ -73,11 +73,17 @@ TASKS
 [CANCELLED]flowchart for game
 [ONGOING]Separate files for codes
 --input acceptor-rejector
---storer for user [NOTDONE]
+--storer for user [DONE]
 --AI to choose for AI [DONE]
 --evaluator to see who wins round [DONE]
 --round keeper to add to round and declare game over
---messages
-[] TIE into submit>AI>evaluate>gameover
+--messages [DONE]
+[DONE] TIE into submit>AI>evaluate>gameover
 
-[]final code
+[DONE]semifinal code
+[ONGOING]debug
+
+DEBUG NOTES
+-scores are not persistent
+-round numbers are not persistent
+-invalid inputs push through up to AI

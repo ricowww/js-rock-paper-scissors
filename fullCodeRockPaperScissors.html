@@ -32,7 +32,7 @@
 
         <!--textfield and submit button-->
         <input type="text" class="inputField" value="">
-        <input type="submit"" class="inputSubmit">
+        <input type="submit" class="inputSubmit">
         <!--textboxes-->
         <h2>Round Number and Score</h2>
         <div id="roundNumberAndScoreDiv"></div>
@@ -60,7 +60,7 @@ const inputField = document.querySelector('.inputField');
 const inputSubmit = document.querySelector('.inputSubmit');
 const roundNumberAndScoreDiv = document.querySelector('#roundNumberAndScoreDiv');
 const gameMessageDiv = document.querySelector('#gameMessageDiv');
-let userChoice ;
+let userChoice;
 
 
 //"storeUserInput" function start
@@ -70,6 +70,8 @@ storeUserInput = () => {
 }
 
 //function end
+
+
 
 //"userInputAcceptReject" PREREQUISITES
 //input userChoice
@@ -158,8 +160,8 @@ alert(computerChoice);
 //call function
 
 //"evaluatorRockPaperScissors"test variables
-let computerChoice = 'paper';
-let userChoice = 'rock';
+//let computerChoice = 'paper';
+//let userChoice = 'rock';
 
 //"evaluatorRockPaperScissors" function variables
 let computerPoints = 0;
@@ -248,9 +250,9 @@ allFunctionsWrapped = () => {
     storeUserInput();
     userInputAcceptReject(userChoice);
     aIRockPaperScissors();
-    evaluatorRockPaperScissors (userChoice, computerChoice);
-    endRound (roundNumber, userPoints, computerPoints);
-}
+    evaluatorRockPaperScissors(userChoice, computerChoice);
+    endRound(roundNumber, userPoints, computerPoints);
+};
 
 inputSubmit.addEventListener('click', allFunctionsWrapped);
 
