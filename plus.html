@@ -6,18 +6,36 @@
 </head>
 
 <body>
+<!--submit button-->
+<input type="submit" class="submitButton" >
 
+<!--textboxes-->
+<div class="messageBox"></div>
 
 <script>
 
-let x = 0;
-addFunc = () => {
-    x += 1;
-    alert(x);
+//SUBMITBOX & MESSAGEBOX
+
+//declare objects
+const submitButton = document.querySelector('.submitButton');
+const messageBox = document.querySelector('.messageBox');
+
+//func var
+let numB = 0;
+
+//func
+numAdd = () => {
+  numB += 1;
+  messageBox.textContent =  numB;
+  alert(numB);
 };
 
+wrapperFunc = () => {
+  numAdd();
+};
 
-
+//listener to trigger function upon click. note, call function with no brackets
+submitButton.addEventListener('click', wrapperFunc);
 
 </script>
 </body>
