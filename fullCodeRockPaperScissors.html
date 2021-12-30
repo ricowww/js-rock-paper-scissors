@@ -16,6 +16,7 @@
         background-color: aqua;
         padding: 100px;
         font-size: medium;
+        
     }
 
 
@@ -29,16 +30,13 @@
     <form>
         <label for="textbox">Type rock, paper, or scissors. We know you are an idiot so capitalization doesn't matter. But please spell it right for fucks sake.</label>
         <br>
-
         <!--textfield and submit button-->
         <input type="text" class="inputField" value="">
         <input type="submit" class="inputSubmit">
         <!--textboxes-->
         <h2>Game Message</h2>
-        <div id="gameMessage"></div>
+        <div class="gameMessage"></div>
     </form>
-
-    
 
 <script>
 
@@ -56,9 +54,8 @@
 
 const inputField = document.querySelector('.inputField');
 const inputSubmit = document.querySelector('.inputSubmit');
-const gameMessage = document.querySelector('#gameMessage');
+const gameMessage = document.querySelector('.gameMessage');
 let userChoice;
-
 
 //"storeUserInput" function start
 
@@ -67,8 +64,6 @@ storeUserInput = () => {
 }
 
 //function end
-
-
 
 //"userInputAcceptReject" PREREQUISITES
 //input userChoice
@@ -248,14 +243,20 @@ endRound = () => {
 }
 //function end
 
+gameMessageFunc = () => {
+    gameMessage.textContent =  (acceptRejectMessage + ' ' + 'Computer chose ' + computerChoice + '.' + roundMessage + ' User score is ' + userPoints + ', and Computer score is ' + computerPoints + '.' + 'This is the end of round ' + roundNumber + '.' + roundEndMessage);
+    let msG = gameMessage.textContent;
+    alert(msG);
+};
+
+
 allFunctionsWrapped = () => {
     storeUserInput();
     userInputAcceptReject();
     aIRockPaperScissors();
     evaluatorRockPaperScissors();
     endRound();
-    gameMessage.textContent =  (acceptRejectMessage + ' ' + 'Computer chose ' + computerChoice + '.' + roundMessage + ' User score is ' + userPoints + ', and Computer score is ' + computerPoints + '.' + 'This is the end of round ' + roundNumber + '.' + roundEndMessage);
-    
+    gameMessageFunc();
 }
 
 inputSubmit.addEventListener('click', allFunctionsWrapped);
