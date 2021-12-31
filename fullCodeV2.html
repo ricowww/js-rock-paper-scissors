@@ -19,34 +19,98 @@ const submitButton = document.querySelector('.submitButton');
 const messageBox = document.querySelector('.messageBox');
 //declare variables
 let userChoice = "";
+let computerPoints = 0;
+let userPoints = 0;
+let roundNumber = 0;
+let roundMessage = "";
+let computerChoice = "";
+let aIRand = 0;
+let gameWinner = "";
+
+
 
 //FUNCTION
 function generalFunction(){
 
-    //get input
-    userChoice = String(inputBox.value);
+  //get input
+  userChoice = String(inputBox.value);
+  //convert input to lowercase
+  userChoice = userChoice.toLowerCase();
+  //if input is bad, dont proceed, if okay, proceed
+  if (userChoice === 'rock') {
+  } else if (userChoice === 'paper') {
+  } else if (userChoice === 'scissors') {
+  } else {
+    return;
+  }
 
-    //convert input to lowercase
-    userChoice = userChoice.toLowerCase();
 
-    //if input is bad, dont proceed, if okay, proceed
-    if(userChoice !== ('rock'||'paper'||'scissors')) {
-        return;
-    }
+  //AI to choose rock etc. randomly
+  aIRand = Math.random();
 
-    //update message
-    messageBox.textContent = userChoice;
+  if (aIRand > 0.66) {
+    computerChoice = 'rock';
+  } else if (aIRand > 0.33) {
+    computerChoice = 'paper';
+  } else if (aIRand > 0) {
+    computerChoice = 'scissors';
+  };
+
+  //determine the round winner
+  //--user enters rock
+  if (userChoice == 'rock' && computerChoice == 'scissors') {
+  userPoints++;
+  roundMessage = 'Meatbag user wins the round!';
+  } else if (userChoice == 'rock' && computerChoice == 'paper') {
+  computerPoints++;
+  roundMessage = 'Computer user wins the round!';
+  } else if (userChoice == 'rock' && computerChoice == 'rock') {
+  roundMessage = 'The round is a draw!';
+  //---user enters paper
+  } else if (userChoice == 'paper' && computerChoice == 'rock') {
+  userPoints++;
+  roundMessage = 'Meatbag wins the round!';
+  } else if (userChoice == 'paper' && computerChoice == 'scissors') {
+  computerPoints++;
+  roundMessage = 'Computer wins the round!';
+  } else if (userChoice == 'paper' && computerChoice == 'paper') {
+  roundMessage = 'The round is a draw!';
+  } else if (userChoice == 'scissors' && computerChoice == 'paper') {
+  userPoints++;
+  roundMessage = 'Meatbag wins the round!';
+  } else if (userChoice == 'scissors' && computerChoice == 'rock') {
+  computerPoints++;
+  roundMessage = 'Computer wins the round!';
+  } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
+  roundMessage = 'The round is a draw!';
+  };
+  roundNumber++;
+
+  //game winner
+  if (userPoints > computerPoints) {
+    gameWinner = 'User won the game!';
+  } else if (userPoints < computerPoints) {
+    gameWinner = 'Computer won the game!';
+  } else {
+    gameWinner = 'It is a draw!';
+  };
+
+  //update message
+  messageBox.textContent = `ROUND ${roundNumber}! User selected ${userChoice} and ComputerAI selected ${computerChoice}. ${roundMessage} User score: ${userPoints}. Computer score: ${computerPoints}`;
+
+  //game over message and reset counters
+  if(roundNumber == 5) {
+    messageBox.textContent = `ROUND ${roundNumber}! \n User score: ${userPoints}. Computer score: ${computerPoints}. GAME OVER! ${gameWinner}`;
+
+    roundNumber = 0;
+    userPoints = 0;
+    computerPoints = 0;
+  }
 
 }
 
 //trigger
 submitButton.addEventListener('click', generalFunction);
-
-//so far, code works
-
-
-
-
 
 
 

@@ -88,12 +88,16 @@ TASKS
 DEBUG NOTES
 -trigger not working due to event listener having a "()" [DONE]
 -whole code not running due to test variables causing duplicates, error spotted in console log [DONE]
--scores are not persistent [ONGOING]
--game round numbers are not persistent [ONGOING]
--invalid inputs push through up to AI [ONGOING]
+-scores are not persistent, solved, see below [DONE]
+-game round numbers are not persistent, solved by rewriting code and putting variables on outside and just using one function [DONE]
+-invalid inputs push through up to AI by doing the thing above. An if with "return;" will cancel all the lines below [DONE]
 -tried relocating the supposedly persistent variables (user scores etc.) to upper line of script, assuming the issue is about redeclaring when click calls functions [TRIED]
 -tried making functions empty and calling them empty but doesnt work either [TRIED]
 -tried making the alerts non concatenated, thinking that concatenations may be causing  value reset but it doesnt [TRIED]
 -calling evaluatorRockPaperScissors() shows that roundMessage was not defined as a variable [DONE]
--Div not displaying text permanently
+-Div not displaying text permanently [DONE]
+-Note debug in every section as you go to ensure QC [TIP]
+-easier to rewrite whole code than to edit debug [TIP]
+-Plan, Pseudocode, Components-Debug, Whole-Debug, Rewrite-Debug
+-FINAL code is "fullCodeV2"
 
