@@ -1,0 +1,64 @@
+<script>
+//access an array element, starts with zero
+const[number]
+
+//change html text by calling an array element value
+<p id="demo"></p>
+//<script>
+const food = {type: 'pasta', weight: '1kg', sauce: 'ragu'};
+document.getElementById("demo").innerHTML = food.type;
+
+//get the last array element using length property
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits[fruits.length-1];
+
+//add and call elements as properties
+const person = {firstName:"John", lastName:"Doe", age:46};
+document.getElementById("demo").innerHTML = person.firstName;
+
+//use for loop to bullet the arrays
+<p id="demo"></p>
+//<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits.length;
+let text = "<ul>";
+for (let i = 0; i < fLen; i++) {text += "<li>" + fruits[i] + "</li>";}
+text += "</ul>";
+document.getElementById("demo").innerHTML = text;
+
+//use forEach to call function per array element
+//<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+function forech(value) {text += '<li>' + value + '</li>'};
+let text = '<ul>';
+fruits.forEach(forech);
+text += '</ul>';
+
+
+//In JavaScript, arrays use numbered indexes.  
+//In JavaScript, objects use named indexes.
+
+//to check if it is an array (numbered) or object (labelled)
+Array.isArray(fruits);
+
+
+//toString() converts an array to a string of (comma separated) array values.
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+
+//join() method also joins all array elements into a string
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" fuck ");
+
+//pop() method removes the last element from an array:
+
+//
+
+//
+
+//
+
+
+
+
+</script>
