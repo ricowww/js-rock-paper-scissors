@@ -91,3 +91,25 @@ for (let i = 0; i < cats.length; i++) {
 //Caracal
 //Lion
 
+
+//loop for creating a sentence
+const cats = ['Pete', 'Biggles', 'Jasmin'];
+let myFavoriteCats = 'My cats are called ';
+for (let i = 0; i < cats.length; i++) {
+  if (i === cats.length - 1) {   // We are at the end of the array
+    myFavoriteCats = `${myFavoriteCats}and ${cats[i]}.`
+  } else {
+    myFavoriteCats = `${myFavoriteCats}${cats[i]}, `
+  }
+}
+console.log(myFavoriteCats); 
+
+//DIY code for above
+const dogs = ['bruno', 'bob', 'chona', 'sparky'];
+let sentenceDogs = "My dogs are named ";
+for (let i = 0; i <(dogs.length-2);i++) {
+  sentenceDogs += dogs[i] + ', ';
+};
+sentenceDogs += 'and ' + dogs[dogs.length-1];
+console.log(sentenceDogs); 
+
