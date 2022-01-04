@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+
+<script>
+//declare array
+//declare sentence var
+const cats = ['Pete', 'Biggles', 'Jasmin'];
+let myFavoriteCats = 'My cats are called ';
+
+//loop to array length as ceiling
+//add  array elements to sentence until the last one
+//last element has an added 'and'
+
+let i = 0;
+while (i < cats.length){
+    if(i < cats.length-1) {
+        myFavoriteCats += `${cats[i]}, `;
+    } else {
+        myFavoriteCats += `and ${cats[i]}.`;
+    };
+    i++;
+};
+
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmin."
+
+
+
+</script>
+</body>
+</html>

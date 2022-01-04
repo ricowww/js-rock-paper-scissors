@@ -135,3 +135,32 @@ for (const cat of cats) {
 
 //The continue statement works in a similar manner to break, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
 //Code to find all whole integer squares is in LoopNotes_IntegerSquares.html
+function squareIntegers(integerCeiling) {
+  integerCeiling = input.value;
+  input.focus();
+  input.value = '';
+  
+  for(let i = 1; i <integerCeiling; i++) {
+    let sqrtInt = Math.sqrt(i);
+    if (sqrtInt !== Math.floor(sqrtInt)) {
+      continue;
+    } else {
+      para.textContent += `${i}, `;
+      //alert(i);
+    };
+  };
+
+};
+btn.addEventListener('click', squareIntegers);
+
+
+//while loop
+// very similar way to the for loop, except that the initializer variable is set before the loop, and the final-expression is included inside the loop after the code to run
+//-------SYNTAX------
+//initializer
+//while (condition) {
+//  code to run
+//
+//  final-expression
+//}
+//see LoopNotes_whileCats.html for full code
