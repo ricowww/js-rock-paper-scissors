@@ -22,11 +22,20 @@ function countdownTen(){
     let i = 10;
     while (i>-1){
         if(i==10){
-            alert('Countdown to 10!');
+            //alert('Countdown to 10!');
+            const para = document.createElement('p'); 
+            para.textContent = 'Countdown to 10!';
+            div.appendChild(para);
         } else if (i==0){
-            alert('Blastoff!');
+            //alert('Blastoff!');
+            const para = document.createElement('p'); 
+            para.textContent = 'Blastoff!';
+            div.appendChild(para);
         } else {
-            alert(i);
+            //alert(i);
+            const para = document.createElement('p'); 
+            para.textContent = `${i}!`;
+            div.appendChild(para);
         };
     i--;
 };
