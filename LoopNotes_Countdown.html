@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <!--button, message div-->
+<button>Countdown from Ten!</button>
+<div></div>
+
+<script>
+//objects button and div
+const button = document.querySelector('button');
+const div = document.querySelector('div');
+
+//Loop from 10 to 0, start at 10, decrement by one (-1)
+//if 10, append a paragraph 'Countdown to 10!'
+//if 0, append a paragraph 'Blastoff!'
+//else, append a paragraph '9,8,7'
+function countdownTen(){
+    let i = 10;
+    while (i>-1){
+        if(i==10){
+            alert('Countdown to 10!');
+        } else if (i==0){
+            alert('Blastoff!');
+        } else {
+            alert(i);
+        };
+    i--;
+};
+
+};
+
+button.addEventListener('click', countdownTen);
+
+
+</script>
+</body>
+</html>
