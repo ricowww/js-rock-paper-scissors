@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+
+
+<script>
+
+//Let user to enter a number
+let n = prompt('Enter any number as ceiling for prime numbers to be enumerated');
+
+//define function to check if number is prime (isPrime), call it later
+
+//--Is the number Prime?--
+//note a prime can only be divided by 1 and by itself
+//loop from 2 to the number being chlecked as your divisor
+//attempt to divide the number by the divisor
+//if we get a zero remainder, the number is composite, we stop the loop, and announce it is not a prime number (false)
+//if the loop finishes without stopping, it is a prime number so we announce it as prime (true)
+function isPrime(num){
+  forLoop: {
+    for(let j=2; j < num; j++) {
+      if(num%j == 0) {
+        //alert('non-prime');
+        return false;
+        break forLoop;//stops loop when non-prime
+        };
+      };
+      //alert('prime');//will only speak when the loop stops
+      return true;
+    };
+  };//end of isPrime()
+
+//Check the input number, note prime numbers are only 2 and above 
+//so if it is less than 2, announce they are non-prime and stop
+//otherwise,  check all numbers (call isPrime) from 2 to inputted number (<=) if they are prime
+//if they are not prime (isPrime = false), skip the current iteration to the next one (continue)
+//if they are prime (isPrime = true), append the number to the message variable
+//after the loop, announce the message variable
+let primeNumMsg = 'These are the prime numbers up to your entered ceiling value: ';
+if (n<2){
+  primeNumMsg = 'The number you entered is neither prime, nor composite, motherfucka.'
+} else {
+  for (let i=2; i <= n; i++){
+    if(isPrime(i)) {
+      primeNumMsg += `${i}, `;
+    } else {
+      continue;
+    };
+  }; //end of main loop
+  primeNumMsg = primeNumMsg.slice(0,primeNumMsg.length-2) + '.';
+}; //end of the main 'if'
+alert(primeNumMsg);
+
+</script>
+</body>
+</html>
