@@ -181,5 +181,75 @@ btn.addEventListener('click', squareIntegers);
 //If the number is 0, print "Blast off!" to the paragraph.
 //For any other number, print just the number to the paragraph.
 //Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you don't want i++ — how do you iterate downwards?
+//continue Countdown, just need to test the para method separately then add --DONE
 
-//continue Countdown, just need to test the para method separately then add
+//GuestList
+//LoopNotes_GuestList.html
+//Active learning: Filling in a guest list
+//In this exercise, we want you to take a list of names stored in an array and put them into a guest list. But it's not quite that easy — we don't want to let Phil and Lola in because they are greedy and rude, and always eat all the food! We have two lists, one for guests to admit, and one for guests to refuse.
+//
+//Specifically, we want you to:
+//
+//Write a loop that will iterate through the people array.
+//During each loop iteration, check if the current array item is equal to "Phil" or "Lola" using a conditional statement:
+//If it is, concatenate the array item to the end of the refused paragraph's textContent, followed by a comma and a space.
+//If it isn't, concatenate the array item to the end of the admitted paragraph's textContent, followed by a comma and a space.
+//We've already provided you with:
+//
+//refused.textContent += — the beginnings of a line that will concatenate something on to the end of refused.textContent.
+//admitted.textContent += — the beginnings of a line that will concatenate something on to the end of admitted.textContent.
+//Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one. Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end? Have a look at the Useful string methods article for help.
+
+//Which loop type should you use?
+//First for...of:
+//for (const item of array) {
+//  // code to run
+//}
+//
+//for:
+//for (initializer; condition; final-expression) {
+//  // code to run
+//}
+
+
+//If the loop body has a single statement, we can omit the curly braces {…}:
+let i = 3;
+while (i) alert(i--);
+
+//The “do…while” loop
+//The condition check can be moved below the loop body using the do..while syntax:
+do {
+  // loop body
+} while (condition);
+let i = 0;
+do {
+  alert( i );
+  i++;
+} while (i < 3);
+
+
+//A label is an identifier with a colon before a loop:
+labelName: for (...) {
+  ...
+}
+outer: for (let i = 0; i < 3; i++) {
+
+for (let j = 0; j < 3; j++) {
+
+  let input = prompt(`Value at coords (${i},${j})`, '');
+
+  // if an empty string or canceled, then break out of both loops
+  if (!input) break outer; // (*)
+
+  // do something with the value...
+}
+}
+alert('Done!');
+
+//In the code above, break outer looks upwards for the label named outer and breaks out of that loop.
+//So the control goes straight from (*) to alert('Done!').
+//We can also move the label onto a separate line:
+
+
+
+

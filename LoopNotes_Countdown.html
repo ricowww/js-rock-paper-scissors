@@ -21,19 +21,18 @@ const div = document.querySelector('div');
 function countdownTen(){
     let i = 10;
     while (i>-1){
+        const para = document.createElement('p'); 
         if(i==10){
             //alert('Countdown to 10!');
-            const para = document.createElement('p'); 
+            //create a container object...but arent we redeclaring a constant?
             para.textContent = 'Countdown to 10!';
             div.appendChild(para);
         } else if (i==0){
             //alert('Blastoff!');
-            const para = document.createElement('p'); 
             para.textContent = 'Blastoff!';
             div.appendChild(para);
         } else {
             //alert(i);
-            const para = document.createElement('p'); 
             para.textContent = `${i}!`;
             div.appendChild(para);
         };
