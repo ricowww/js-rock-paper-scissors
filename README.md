@@ -98,6 +98,17 @@ DEBUG NOTES
 -Div not displaying text permanently [DONE]
 -Note debug in every section as you go to ensure QC [TIP]
 -easier to rewrite whole code than to edit debug [TIP]
--Plan, Pseudocode, Components-Debug, Whole-Debug, Rewrite-Debug
+-Plan, Pseudocode, Components-Debug, Whole-Debug, Rewr
+ite-Debug
 -FINAL code is "fullCodeV2"
+
+
+
+
+----------------------
+
+
+2022 01 26 We are making a UI now!
+
+
 
